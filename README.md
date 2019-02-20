@@ -1,0 +1,1 @@
+A more thorough CRUD app for editing the dataset created by MonsterScrape from the D&D API.
