@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // The line below is from the tutorial, and throws MissingSchemaError: Schema hasn't been registered for model "Monster".
 // const Monster = mongoose.model("Monster");
 
-// The line below is from https://stackoverflow.com/questions/52020881/how-to-include-a-model-in-node-express-js and seems to work:
+// The line below is from https://stackoverflow.com/questions/52020881/how-to-include-a-model-in-node-express-js and seems to work.  It is backed up by the official Express documentation at MDN: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes
 Monster = require("../models/Monster.js");
 
 const monsterController = {};
