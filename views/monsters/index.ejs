@@ -21,6 +21,7 @@
           <tr>
             <th>Monster Name</th>
             <th>Alignment</th>
+            <th>Database ID</th>
             <th>Hit Dice</th>
           </tr>
         </thead>
@@ -31,6 +32,7 @@
               <a href="monsters/show/<%= monsters[i]._id%>">
               <%=monsters[i].name%></a></td>
               <td><%=monsters[i].alignment%></td>
+              <td><%=monsters[i]._id%></td>
               <td><%=monsters[i].hit_dice%></td>
             </td>
           </tr>

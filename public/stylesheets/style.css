@@ -10,3 +10,7 @@ a {
 h1 {
   color: rgb(111, 0, 255);
 }
+
+th {
+  text-align: left;
+}
