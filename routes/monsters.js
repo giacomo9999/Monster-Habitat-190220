@@ -6,7 +6,7 @@ const monster = require("../controllers/monsterController.js");
 router.get("/", monster.list);
 
 // Get single monster by id
-router.get("/:id", monster.show);
+router.get("/show/:id", monster.show);
 
 // Create monster
 router.get("/create", monster.create);

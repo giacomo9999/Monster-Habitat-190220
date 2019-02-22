@@ -19,7 +19,9 @@ monsterController.list = (req, res) => {
 };
 
 monsterController.show = (req, res) => {
-  Monster.findOne({ id: req.params.id }).exec((err, monster) => {
+  console.log("Request ID: ", req.params.id);
+  console.log("Request Body: ", req.body);
+  Monster.findOne({ _id: req.params.id }).exec((err, monster) => {
     if (err) {
       console.log(err);
     } else {
