@@ -20,5 +20,9 @@
             <p>Frequency: <%=monster.frequency%></p>   
             <p>Habitat: <%=monster.habitat%></p>   
     </div>
+    <h3> <a href="/monsters/edit/<%= monster._id%>">EDIT</a></h3>
+    <form action="/monsters/delete/<%= monster._id%>" method="post">
+    <button type="submit">DELETE</button>
+    </form>
   </body>
 </html>
