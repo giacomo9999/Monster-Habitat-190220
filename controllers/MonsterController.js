@@ -44,7 +44,7 @@ monsterController.save = (req, res) => {
       console.log(err);
       res.render("../views/monsters/create");
     } else {
-      console.log("Successfully created a monster.");
+      console.log("Successfully created a monster....");
       res.redirect("/monsters/show/" + monster._id);
     }
   });
@@ -61,11 +61,12 @@ monsterController.edit = (req, res) => {
 };
 
 monsterController.update = (req, res) => {
-  Monster.findByIdAndUpdate(
-    req.params.id,
+  console.log("---Update request:", req.params._id);
+  Monster.findOneAndUpdate(
+    { _id: req.params.id },
     {
       $set: {
-        api_index: req.body.api_index,
+        // api_index: req.body.api_index,
         name: req.body.name,
         number_appearing: req.body.number_appearing,
         alignment: req.body.alignment,
@@ -77,10 +78,12 @@ monsterController.update = (req, res) => {
     },
     { new: true },
     (err, monster) => {
+      console.log("***** Monster ID data: ", req.params._id, monster, req.body);
       if (err) {
         console.log(err);
         res.render("../views/monsters/edit", { monster: req.body });
       }
+      console.log("**** Here.");
       res.redirect("/monsters/show/" + monster._id);
     }
   );

@@ -10,8 +10,28 @@
   <body>
     <div class="container">
       <h3><a href="/monsters">Monster List</a></h3>
-      <h5>This is Edit One Monster.ejs</h5> 
+      <h5>This is Edit One Monster.ejs</h5>
       <h2>Edit A Monster: <%=monster.name%></h2>
+
+      <form action="/monsters/update/<%= monster._id%>" method="post">
+        Monster Name:
+        <input type="text" name="name" value="<%= monster.name%>" />
+        <br />
+        Number Appearing: <input type="text" name="number_appearing" value="<%= monster.number_appearing%>" />
+        <br />
+        Alignment <input type="text" name="alignment" value="<%= monster.alignment%>" />
+        <br />
+        Hit Dice: <input type="text" name="hit_dice" value="<%= monster.hit_dice%>" />
+        <br />
+        Type: <input type="text" name="type" value="<%= monster.type%>" />
+        <br />
+        Frequency: <input type="text" name="frequency" value="<%= monster.frequency%>" />
+        <br />
+        Habitat: <input type="text" name="habitat" value="<%= monster.habitat%>" />
+        <br />
+        <br />
+        <button type="submit" value="Save">Save</button>
+      </form>
     </div>
   </body>
 </html>
