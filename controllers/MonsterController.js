@@ -61,7 +61,6 @@ monsterController.edit = (req, res) => {
 };
 
 monsterController.update = (req, res) => {
-  console.log("---Update request:", req.params._id);
   Monster.findOneAndUpdate(
     { _id: req.params.id },
     {
@@ -78,12 +77,10 @@ monsterController.update = (req, res) => {
     },
     { new: true },
     (err, monster) => {
-      console.log("***** Monster ID data: ", req.params._id, monster, req.body);
       if (err) {
         console.log(err);
         res.render("../views/monsters/edit", { monster: req.body });
       }
-      console.log("**** Here.");
       res.redirect("/monsters/show/" + monster._id);
     }
   );
