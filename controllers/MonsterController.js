@@ -20,7 +20,6 @@ monsterController.list = (req, res) => {
 
 monsterController.show = (req, res) => {
   console.log("Request ID: ", req.params.id);
-  console.log("Request Body: ", req.body);
   Monster.findOne({ _id: req.params.id }).exec((err, monster) => {
     if (err) {
       console.log(err);
@@ -64,12 +63,12 @@ monsterController.update = (req, res) => {
       $set: {
         api_index: req.body.api_index,
         name: req.body.name,
-        number_appearing: req.body.name,
-        alignment: req.body.name,
-        hit_dice: req.body.name,
-        type: req.body.name,
-        frequency: req.body.name,
-        habitat: req.body.name
+        number_appearing: req.body.number_appearing,
+        alignment: req.body.alignment,
+        hit_dice: req.body.hit_dice,
+        type: req.body.type,
+        frequency: req.body.frequency,
+        habitat: req.body.habitat
       }
     },
     { new: true },
