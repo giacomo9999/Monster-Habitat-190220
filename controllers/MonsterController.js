@@ -35,13 +35,17 @@ monsterController.create = (req, res) => {
 
 monsterController.save = (req, res) => {
   const monster = new Monster(req.body);
+  console.log(monster);
+  if (monster.name === "") {
+    monster.name = "New Monster";
+  }
   monster.save(err => {
     if (err) {
       console.log(err);
       res.render("../views/monsters/create");
     } else {
       console.log("Successfully created a monster.");
-      res.redirect("/monsters/show" + monster._id);
+      res.redirect("/monsters/show/" + monster._id);
     }
   });
 };
