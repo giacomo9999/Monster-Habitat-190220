@@ -10,19 +10,19 @@
   <body>
     <div class="container">
       <h3><a href="/monsters">Monster List</a></h3>
-      <h5>This is Show One Monster.ejs</h5> 
-            <h2><%=monster.name%></h2>
-            <p>API Index: <%=monster.api_index%></p>
-            <p>Number Appearing: <%=monster.number_appearing%></p> 
-            <p>Alignment: <%=monster.alignment%></p>     
-            <p>Hit Dice: <%=monster.hit_dice%></p>   
-            <p>Type: <%=monster.type%></p>   
-            <p>Frequency: <%=monster.frequency%></p>   
-            <p>Habitat: <%=monster.habitat%></p>   
+      <h5>This is Show One Monster.ejs</h5>
+      <h2><%=monster.name%></h2>
+      <p>API Index: <%=monster.api_index%></p>
+      <p>Number Appearing: <%=monster.number_appearing%></p>
+      <p>Alignment: <%=monster.alignment%></p>
+      <p>Hit Dice: <%=monster.hit_dice%></p>
+      <p>Type: <%=monster.type%></p>
+      <p>Frequency: <%=monster.frequency%></p>
+      <p>Habitat: <%=monster.habitat%></p>
     </div>
-    <h3> <a href="/monsters/edit/<%= monster._id%>">EDIT</a></h3>
+    <h3><a href="/monsters/edit/<%= monster._id%>">EDIT</a></h3>
     <form action="/monsters/delete/<%= monster._id%>" method="post">
-    <button type="submit">DELETE</button>
+      <button type="submit">DELETE</button>
     </form>
   </body>
 </html>
