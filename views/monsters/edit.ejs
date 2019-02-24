@@ -32,20 +32,37 @@
         <br />
         Type: <input type="text" name="type" value="<%= monster.type%>" />
         <br />
-        Frequency:
-        <input type="text" name="frequency" value="<%= monster.frequency%>" />
+        <!-- Frequency:
+        <input type="text" name="frequency" value="<%= monster.frequency%>" /> -->
         <br />
+        <fieldset>
+          <legend>Frequency:</legend>
+          <input type="radio" name="frequency" value="common" />
+          Common
+          <input type="radio" name="frequency" value="uncommon" />Uncommon
+          <input type="radio" name="frequency" value="rare" /> Rare
+          <input type="radio" name="frequency" value="very rare" /> Very Rare
+          <input type="radio" name="frequency" value="unique" /> Unique
+          </fieldset>
         <!-- Habitat:
         <input type="text" name="habitat" value="<%= monster.habitat%>" />
         <br /> -->
         <br />
         <fieldset>
           <legend>Habitat (Select all that apply)</legend>
-            <input type="checkbox" name="habitat" value="chocolate" />
-            Chocolate
-            <input type="checkbox" name="habitat" value="vanilla" /> Vanilla
-            <input type="checkbox" name="habitat" value="mint" /> Mint
-          
+          <input type="checkbox" name="habitat" value="underground" />
+          Underground
+          <input type="checkbox" name="habitat" value="frigid" />Frigid
+          <input type="checkbox" name="habitat" value="desert" /> Desert
+          <input type="checkbox" name="habitat" value="mountain" /> Mountain
+          <input type="checkbox" name="habitat" value="settlement" /> Settlement
+          <input type="checkbox" name="habitat" value="forest" /> Forest
+          <input type="checkbox" name="habitat" value="jungle" /> Jungle
+          <input type="checkbox" name="habitat" value="swamp" /> Swamp
+          <input type="checkbox" name="habitat" value="steppe" /> Steppe
+          <input type="checkbox" name="habitat" value="savanna" /> Savanna
+          <input type="checkbox" name="habitat" value="outer plane" /> Outer
+          Plane
         </fieldset>
         <br />
         <button type="submit" value="Save">Save</button>
