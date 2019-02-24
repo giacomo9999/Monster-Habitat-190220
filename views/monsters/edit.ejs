@@ -17,18 +17,36 @@
         Monster Name:
         <input type="text" name="name" value="<%= monster.name%>" />
         <br />
-        Number Appearing: <input type="text" name="number_appearing" value="<%= monster.number_appearing%>" />
+        Number Appearing:
+        <input
+          type="text"
+          name="number_appearing"
+          value="<%= monster.number_appearing%>"
+        />
         <br />
-        Alignment <input type="text" name="alignment" value="<%= monster.alignment%>" />
+        Alignment
+        <input type="text" name="alignment" value="<%= monster.alignment%>" />
         <br />
-        Hit Dice: <input type="text" name="hit_dice" value="<%= monster.hit_dice%>" />
+        Hit Dice:
+        <input type="text" name="hit_dice" value="<%= monster.hit_dice%>" />
         <br />
         Type: <input type="text" name="type" value="<%= monster.type%>" />
         <br />
-        Frequency: <input type="text" name="frequency" value="<%= monster.frequency%>" />
+        Frequency:
+        <input type="text" name="frequency" value="<%= monster.frequency%>" />
         <br />
-        Habitat: <input type="text" name="habitat" value="<%= monster.habitat%>" />
+        <!-- Habitat:
+        <input type="text" name="habitat" value="<%= monster.habitat%>" />
+        <br /> -->
         <br />
+        <fieldset>
+          <legend>Habitat (Select all that apply)</legend>
+            <input type="checkbox" name="habitat" value="chocolate" />
+            Chocolate
+            <input type="checkbox" name="habitat" value="vanilla" /> Vanilla
+            <input type="checkbox" name="habitat" value="mint" /> Mint
+          
+        </fieldset>
         <br />
         <button type="submit" value="Save">Save</button>
       </form>

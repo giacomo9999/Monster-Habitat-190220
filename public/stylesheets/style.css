@@ -86,5 +86,9 @@ th {
 }
 
 .container .list-table {
-  border-bottom: solid 2px #DDDDDD;
+  border-bottom: solid 2px #dddddd;
+}
+
+.fieldset {
+  width: 400px;
 }
