@@ -24,7 +24,7 @@ th {
 .container {
   padding: 20px;
   background-color: #efefef;
-  width: 850px;
+  width: 1200px;
   border-radius: 6px;
 }
 
@@ -43,7 +43,9 @@ th {
 }
 
 .container table {
-  width: 800px;
+  width: 1000px;
+  border-collapse: separate;
+  border-spacing: 3px;
 }
 
 .container table tr td {
@@ -80,7 +82,7 @@ th {
 }
 
 .container .list-table {
-  width: 360px;
+  width: 900px;
   border: solid 2px #dddddd;
   border-spacing: 0;
 }

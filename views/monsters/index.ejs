@@ -21,8 +21,10 @@
           <tr>
             <th>Monster Name</th>
             <th>Alignment</th>
-            <th>Database ID</th>
+            <th>No. Appearing</th>
             <th>Hit Dice</th>
+            <th>Frequency</th>
+            <th>Habitat</th>
           </tr>
         </thead>
         <tbody>
@@ -32,8 +34,10 @@
               <a href="monsters/show/<%= monsters[i]._id%>">
               <%=monsters[i].name%></a></td>
               <td><%=monsters[i].alignment%></td>
-              <td><%=monsters[i]._id%></td>
+              <td><%=monsters[i].number_appearing%></td>
               <td><%=monsters[i].hit_dice%></td>
+              <td><%=monsters[i].frequency%></td>
+              <td><%=monsters[i].habitat%></td>
             </td>
           </tr>
           <% } %>
